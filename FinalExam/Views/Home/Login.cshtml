@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2 class="title is-2">Login</h2>
+<hr />
+<div>
+    <form id="form1" method="post" action="/Home/Login" class="form-group">
+        <div>
+            <label for="Username">Username</label>
+        </div>
+        <div>
+            <input name="Username" type="text" class="form-control" />
+        </div>
+        <br />
+        <div>
+            <label for="Password">Password</label>
+        </div>
+        <div>
+            <input name="Password" type="password" class="form-control" />
+        </div>
+
+        <br />
+        <div>
+            <label for="RememberMe">Remember Me</label>
+        </div>
+        <input id="Remember" type="checkbox" value="true" name="RememberMe" />
+        <input type="hidden" value="false" name="RememberMe" />
+
+        <br />
+        <div>
+            <input type="submit" value="Login" class="btn btn-default" style="margin-right:20px" />
+
+            @*cool code*@
+            @Html.ActionLink("Sign Up", "Create", "User", null, new { @class = "btn btn-primary" })
+
+
+
+        </div>
+    </form>
+</div>
+
+
